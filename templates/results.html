@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h2>{{ the_title }}</h2>
+
+<p>You submitted the following data:</p>
+<table>
+<tr><td>Language used for input </td><td>{{ Input_lang }}</td></tr>
+<tr><td>your query </td><td>{{ the_phrase }}</td></tr>
+<tr><td>destination language </td><td>{{ dest_lang }}</td></tr>
+</table>
+
+<p>language translated from "{{ Input_lang }}" is translated to "{{ dest_lang }}", the following
+results are returned:</p>
+<h3>{{ the_results }}</h3>
+<p><a href="http://theplayer11224.pythonanywhere.com"><input value='TranslateAnotherPhrase(global)' type='button'></a></p>
+<p><a href="http://127.0.0.1:5000/"><input value='TranslateAnotherPhrase(local)' type='button'></a></p>
+{% endblock %}
